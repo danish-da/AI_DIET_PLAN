@@ -1,0 +1,33 @@
+{% extends 'temp/public.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blood donours</title>
+</head>
+<body>
+	<center>
+    <h2>View Blood Donours</h2>
+		<table border="2" class="table table-bordered">
+			<tr style="color: black">
+				<th >Username</th>
+				<th>Blood Group</th>
+				<th>Health Condition</th>
+				<th>Phone Number</th>
+			</tr>
+            {% for i in a %}
+			<tr style="color: black">
+				<td>{{ i.name }}</td>
+				<td>{{ i.blood_group }}</td>
+				<td>{{ i.health_condition }}</td>
+				<td>{{ i.phn }}</td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}
