@@ -1,0 +1,34 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>view user</title>
+</head>
+<body>
+	<center>
+		<table border="2" class="table table-bordered">
+		<tr style="color: black">
+			<th>Username</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Email</th>
+			<th>Phone Number</th>
+		</tr>
+            {% for i in a %}
+		<tr style="color: black">
+			<td>{{ i.name }}</td>
+			<td>{{ i.age }}</td>
+			<td>{{ i.gender }}</td>
+			<td>{{ i.email }}</td>
+			<td>{{ i.phn_number }}</td>
+		</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}
