@@ -1,0 +1,35 @@
+{% extends 'temp/userpage.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>manage health profile</title>
+</head>
+<body>
+	<center>
+		<table border="2">
+			<tr>
+				<th>Height</th>
+				<th>Weight</th>
+				<th>Body Type</th>
+                <th>Working Hour</th>
+
+			</tr>
+            {% for i in a %}
+			<tr>
+				<td>{{ i.height }}</td>
+				<td>{{ i.weight }}</td>
+				<td>{{ i.body_type }}</td>
+                <td>{{ i.working_hour }}</td>
+
+				<td><a href="/health_profile/edit_health/{{ i.health_id }}" class="btn btn-primary">edit</a> </td>
+			</tr>
+            {% endfor %}
+        </table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

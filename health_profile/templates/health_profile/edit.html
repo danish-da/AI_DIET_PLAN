@@ -1,0 +1,41 @@
+{% extends 'temp/userpage.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Health Profile</title>
+</head>
+<body>
+	<center>
+		<form method="post">
+            {% csrf_token %}
+			<table>
+				<tr>
+					<td>Height</td>
+					<td><input type="text" name="height" value="{{ h.height }}" required="" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Weight</td>
+					<td><input type="text" name="weight" value="{{ h.weight }}" required="" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Body Type</td>
+					<td><input type="text" name="body" value="{{ h.body_type }}" required="" class="form-control"></td>
+				</tr>
+                <tr>
+					<td>Working Hours</td>
+					<td><input type="time" name="work" value="{{ h.working_hour }}" required="" class="form-control"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>
+{% endblock %}
