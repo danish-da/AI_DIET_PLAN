@@ -1,0 +1,111 @@
+{% extends 'temp/userpage.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: black">Diet Prediction</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table style="color: white">
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" name="q1" placeholder="Enter Your Age"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                 <tr>
+                    <td>Weight</td>
+                     <td><input type="text" name="q2" placeholder="Enter your weight(kg)"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                    <td>Height</td>
+                     <td><input type="text" name="q3" placeholder="Enter your Height(M)"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                 <tr>
+                    <td>Sex</td>
+                    <td><input type="radio" name="q4" value="M">Male
+                    <input type="radio" name="q4" value="F">Female</td>
+                </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BMI</td>
+                     <td><input type="text" name="q5" placeholder="Enter your BMI"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BMR</td>
+                     <td><input type="text" name="q6" placeholder="Enter your BMR"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+               <tr>
+                    <td>Activity Level</td>
+                     <td><input type="text" name="q7" placeholder="Enter your Activity Level"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" name="btn"  class="btn btn-primary" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
+{% endblock %}
